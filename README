@@ -1,0 +1,38 @@
+#  04/08/2019
+#  Two files uploaded; phenotypic data and genotypic data files.
+
+#  File description:
+#  1. phenotypic Data File
+Contains 5,430 accesions evaluated for seed composition over a total of 18 variables.
+
+Samples reported upon are from the USDA Germplasm Collection based in Urbana, IL. 
+Soybean samples were scanned by NIR at the University of Minnesota's Soybean Breeding 
+Project laboratory. Whole soybean samples received from USDA-NASS were first ground and 
+then scanned on a FOSS 6500 NIR Instrument. NIR Spectra from the FOSS 6500 were predicted 
+using ISIPredict Software version 1.10.2.4842. Calibrations, provided by FOSS North 
+America, were used to predict soybean composition from the NIR spectra. 
+
+#  2. Genotypic Data File
+Contains 34,706 SNP markers polymorphic among 5,430 diverse soybean accessions at the 
+5 % MAF threshold.
+Preliminary analyses, based on hierarchical clustering on principal components, shows 
+the data to be highly clustered with about 10 subgroups. The basis of the clustering 
+pattern observed is still under investigation
+
+One aim of this study could be to investigate how clustering affects prediction.To do this, 
+we can hypothesize that within cluster predictions are more accurate than predictions when
+the data is treated as unclustered i.e. uniform throughout.
+
+#  We can test different models (e.g. 3 models if each writes a model) and then test 
+which model performs best and whether or not pooling the best performing models is better 
+than choosing a single best performing model
+#  Hypothesis: pooling best performing models gives better results than any of the models
+evaluated independently
+   
+#  Model performance can be judged based on; 1) prediction accuracy, 2) different diagnostics
+we learned in class e.g. comparisons of the posterior distributions and the data distbn.
+   
+# General ideas to ponder and agree on when we next meet:
+1. should we predict on just a few variables or all the 18?
+2. should we adopt a 75% to 25% ratio of the training set and prediction set; if yes, should
+should we predict on the whole data set interchangeably?    
